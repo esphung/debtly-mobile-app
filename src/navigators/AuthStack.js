@@ -15,6 +15,7 @@ import WelcomeScreen from 'screens/WelcomeScreen';
 // import HomeScreen from 'screens/HomeScreen';
 // import DetailsScreen from 'screens/DetailsScreen';
 import OnboardingScreen from 'screens/OnboardingScreen';
+// import NeumorphicTestScreen from 'screens/NeumorphicTestScreen';
 
 const Stack = createStackNavigator();
 
@@ -22,6 +23,13 @@ function AuthStack() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
+        {/*<Stack.Screen
+          name="NeumorphicTest"
+          component={NeumorphicTestScreen}
+          options={{
+            headerLeft: () => {}, // show nothing in top left
+          }}
+        />*/}
         <Stack.Screen
           name="Welcome"
           component={WelcomeScreen}
@@ -33,7 +41,7 @@ function AuthStack() {
             headerTintColor: 'white', // 'transparent',
             headerRight: () => (
               <TouchableOpacity
-                onPress={() => alert('Hello')}
+                // onPress={() => alert('Hello')}
                 style={{
                   flex: 1,
                   justifyContent: 'center',
@@ -46,8 +54,10 @@ function AuthStack() {
                 }}
               >
                 <Text style={{
+                  fontFamily: 'Poppins_700Bold',
                   color: colors.turtleGreen,
-                  fontWeight: 'bold',
+                  fontSize: 17,
+                  // fontWeight: 'bold',
                 }}
                 >
                   Login

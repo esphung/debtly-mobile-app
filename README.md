@@ -18,4 +18,16 @@ npm install @react-navigation/stack
 npm install --save react-native-gesture-handle
 
 expo install react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+
+# custom fonts
+expo install @expo-google-fonts/poppins expo-font
+
+# expo load images
+expo install expo-asset
+
+# button css gradients
+expo install expo-linear-gradient
+
+# Neumorphism
+npm install --save neumorphism-ui
 ```

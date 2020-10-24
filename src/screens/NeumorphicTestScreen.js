@@ -22,7 +22,7 @@ const screen = Dimensions.get('screen');
 const styles = StyleSheet.create({
   northPanel: {
     flex: 1,
-    // backgroundColor: 'steelblue',
+    backgroundColor: 'steelblue',
     alignItems: 'center',
     justifyContent: 'center',
 
@@ -31,16 +31,12 @@ const styles = StyleSheet.create({
     // borderStyle: 'solid',
   },
   soutPanel: {
-    flex: 0.3,
+    flex: 0.25,
     // backgroundColor: 'skyblue',
   },
 });
 
 function WelcomeScreen({ navigation }) {
-  // event called to navigate to onboarding screen
-  const getStartedBtnPressed = () => navigation.navigate('Onboarding', {
-    slideId: 0,
-  });
   const view = (
     <SafeAreaView
       style={{
@@ -66,7 +62,7 @@ function WelcomeScreen({ navigation }) {
         {/* Screen Message Container */}
         <View
           style={{
-            flex: 0.3,
+            flex: 0.4,
             width: screen.width,
 
             // borderWidth: 1,
@@ -82,23 +78,21 @@ function WelcomeScreen({ navigation }) {
       {/* SOUTH PANEL */}
       <View style={styles.soutPanel}>
 
-        {/* Get Started Button Container */}
+    {/* Get Started Button Container */}
         <View
           style={{
-            flex: 0.5,
-            paddingBottom: 20,
+            flex: 0.4,
             width: screen.width,
-            height: screen.height * 0.1,
             justifyContent: 'center',
             alignItems: 'center',
 
-            // borderWidth: 1,
-            // borderColor: 'blue',
-            // borderStyle: 'solid',
+            borderWidth: 1,
+            borderColor: 'blue',
+            borderStyle: 'solid',
           }}
         >
           <NeumorphicButton
-            onPress={getStartedBtnPressed}
+            onPress={() => alert('Pressed Get Started!')}
             title="Get Started"
           />
           {/*
@@ -110,16 +104,6 @@ function WelcomeScreen({ navigation }) {
             />
           */}
         </View>
-
-        <View
-          style={{
-            flex: 1,
-
-            // borderWidth: 1,
-            // borderColor: 'green',
-            // borderStyle: 'solid',
-          }}
-        />
       </View>
 
     </SafeAreaView>
