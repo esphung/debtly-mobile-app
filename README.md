@@ -1,6 +1,6 @@
 # Debtly App
 
-## Install and Setup
+## Installation and Setup
 ```shell
 # eslinter
 npm install --save-dev eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y babel-eslint
@@ -15,5 +15,7 @@ npm install @react-navigation/native
 
 npm install @react-navigation/stack
 
-expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+npm install --save react-native-gesture-handle
+
+expo install react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
 ```
