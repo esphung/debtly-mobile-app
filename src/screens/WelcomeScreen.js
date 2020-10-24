@@ -1,8 +1,8 @@
 import React from 'react';
 import {
   View,
-  Text,
-  Button,
+  // Text,
+  // Button,
   SafeAreaView,
   StyleSheet,
   Dimensions,
@@ -16,6 +16,8 @@ import NeumorphicButton from 'components/Shared/NeumorphicButton';
 import DisplayImage from 'components/WelcomeScreen/DisplayImage';
 
 import HeroText from 'components/WelcomeScreen/HeroText';
+
+import SmartTip from 'components/WelcomeScreen/SmartTip';
 
 const screen = Dimensions.get('screen');
 
@@ -46,6 +48,7 @@ function WelcomeScreen({ navigation }) {
       style={{
         flex: 1,
         backgroundColor: colors.offGrey,
+        alignItems: 'center', // for device rotation
       }}
     >
       {/* NORTH PANEL */}
@@ -101,16 +104,7 @@ function WelcomeScreen({ navigation }) {
             onPress={getStartedBtnPressed}
             title="Get Started"
           />
-          {/*
-            Button
-              title="Go to Onboarding"
-              onPress={() => navigation.navigate('Onboarding', {
-                slideId: 0,
-              })}
-            />
-          */}
         </View>
-
         <View
           style={{
             flex: 1,
@@ -119,9 +113,10 @@ function WelcomeScreen({ navigation }) {
             // borderColor: 'green',
             // borderStyle: 'solid',
           }}
-        />
+        >
+          <SmartTip />
+        </View>
       </View>
-
     </SafeAreaView>
   );
   return view;

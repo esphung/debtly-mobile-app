@@ -13,7 +13,7 @@ import colors from 'colors';
 const styles = StyleSheet.create({
   // basic font style
   text: {
-    fontSize: 15,
+    fontSize: 14,
     fontFamily: 'Poppins_500Medium',
   },
   title: {
