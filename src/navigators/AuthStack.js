@@ -23,17 +23,20 @@ function AuthStack() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        {/*<Stack.Screen
-          name="NeumorphicTest"
-          component={NeumorphicTestScreen}
-          options={{
-            headerLeft: () => {}, // show nothing in top left
-          }}
-        />*/}
+        {/*
+          <Stack.Screen
+            name="NeumorphicTest"
+            component={NeumorphicTestScreen}
+            options={{
+              headerLeft: () => {}, // show nothing in top left
+            }}
+          />
+        */}
         <Stack.Screen
           name="Welcome"
           component={WelcomeScreen}
           options={{
+            gestureEnabled: false,
             headerStyle: {
               backgroundColor: colors.offGrey, // 'transparent',
             },
@@ -70,6 +73,12 @@ function AuthStack() {
           name="Onboarding"
           component={OnboardingScreen}
           options={{
+            gestureEnabled: false,
+            headerStyle: {
+              backgroundColor: colors.offGrey, // 'transparent',
+            },
+            headerTitle: '',
+            headerTintColor: 'white', // 'transparent',
             headerLeft: () => {}, // show nothing in top left
           }}
         />

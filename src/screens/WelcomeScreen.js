@@ -69,7 +69,7 @@ function WelcomeScreen({ navigation }) {
         {/* Screen Message Container */}
         <View
           style={{
-            flex: 0.3,
+            flex: 0.4,
             width: screen.width,
 
             // borderWidth: 1,

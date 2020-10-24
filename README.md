@@ -30,4 +30,10 @@ expo install expo-linear-gradient
 
 # Neumorphism
 npm install --save neumorphism-ui
+
+# Status Bar
+expo install expo-status-bar
+
+# Constants (padding)
+expo install expo-constants
 ```

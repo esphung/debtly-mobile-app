@@ -19,7 +19,8 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 17,
     color: 'white',
-    fontFamily: 'Poppins_600SemiBold',
+    // fontFamily: 'Poppins_600SemiBold',
+    fontFamily: 'Poppins_500Medium',
   },
   gradient: {
     flex: 1,
@@ -39,15 +40,17 @@ const styles = StyleSheet.create({
 const NeumorphicButton = ({
   title,
   onPress,
+  width,
+  fontSize,
 }) => {
   const view = (
     <NeuButton
       style={{
         alignSelf: 'center',
-        // maxHeight: screen.height * 0.08,
+        maxHeight: screen.height * 0.08,
         height: 70,
-        width: screen.width * 0.45,
-        // width: '100%',
+        maxWidth: screen.width * 0.45,
+        width: width ? width : '100%',
         borderRadius: 9,
         // borderWidth: 1,
         // borderColor: 'red',
@@ -87,7 +90,11 @@ const NeumorphicButton = ({
               source={{ uri: 'https://www.freepnglogos.com/uploads/heart-png/emoji-heart-33.png' }}
             />
           */}
-          <Text style={styles.title}>
+          <Text
+            style={[styles.title, {
+              fontSize: fontSize ? fontSize : styles.title.fontSize,
+            }]}
+          >
             { title }
           </Text>
         </View>

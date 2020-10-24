@@ -20,11 +20,11 @@ const styles = StyleSheet.create({
     fontSize: 25,
     color: colors.matteBlack,
     fontFamily: 'Poppins_600SemiBold',
-    padding: 2,
+    padding: 4,
   },
   subtitle: {
     color: colors.darkGrey,
-    padding: 2,
+    padding: 4,
   },
 });
 
