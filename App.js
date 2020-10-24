@@ -1,49 +1,16 @@
+/*
+FILENAME:     App.js
+PURPOSE:      entry point for debtly app
+AUTHOR:       Eric Phung
+CREATED:      10/24/2020 11:49 AM
+*/
 import React from 'react';
-import { View, Text, Button } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+// import { Text, View } from 'react-native';
 
-// screen
-import WelcomeScreen from './src/screens/WelcomeScreen';
-// import HomeScreen from './src/screens/HomeScreen';
-import DetailsScreen from './src/screens/DetailsScreen';
+import AuthStack from 'navigators/AuthStack';
 
-const Stack = createStackNavigator();
-
-function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen
-          name="Welcome"
-          component={WelcomeScreen}
-          options={{
-            title: '',
-            headerStyle: {
-              backgroundColor: '#f4511e',
-            },
-            // headerTintColor: 'green',
-            // headerTitleStyle: {
-            //   fontWeight: 'bold',
-            // },
-            headerRight: () => (
-              <Button
-                onPress={() => alert('This is a button!')}
-                title="Login"
-                // color="green"
-              />
-            ),
-          }}
-        />
-        <Stack.Screen
-          name="Details"
-          component={DetailsScreen}
-          options={{
-            headerLeft: () => {}, // show nothing in top left
-          }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
+const App = () => {
+  const view = <AuthStack />;
+  return view;
+};
 export default App;
