@@ -42,7 +42,7 @@ const DisplayImage = () => {
     <View style={styles.container}>
       <Image
         style={styles.image}
-        source={global.defaultPlaceholderImage}
+        source={global.welcomeScreenImage}
       />
     </View>
   );

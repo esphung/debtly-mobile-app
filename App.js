@@ -6,7 +6,7 @@ CREATED:      10/24/2020 11:49 AM
 */
 
 import React, { useState } from 'react';
-import { Text, View } from 'react-native';
+// import { Text, View } from 'react-native';
 import { AppLoading } from 'expo';
 
 import { Asset } from 'expo-asset';
@@ -76,6 +76,15 @@ const App = () => {
     const imageAssets = cacheImages([
       // 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
       global.defaultPlaceholderImage,
+      // welcome screen images
+      global.welcomeScreenImage,
+      // onboarding images
+      global.slide001Image,
+      global.slide002Image,
+      global.slide003Image,
+      global.slide004Image,
+      global.slide005Image,
+      global.slide006Image,
     ]);
     await Promise.all([...imageAssets]);
   };

@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins_500Medium',
   },
   gradient: {
-    flex: 1,
-    width: '100%',
+    // flex: 1,
+    // width: '100%',
     height: '100%',
     alignItems: 'center',
     justifyContent: 'center',
@@ -56,7 +56,7 @@ const NeumorphicButton = ({
         // borderColor: 'red',
         // borderStyle: 'solid',
         // alignSelf: 'center',
-        // backgroundColor: colors.buttonGreenLeftEndTransientColor,
+        // backgroundColor: '#e0e5ec' // colors.buttonGreenLeftEndTransientColor,
       }}
       noPressedState
       onPress={onPress}
@@ -64,24 +64,35 @@ const NeumorphicButton = ({
       //   Alert.alert('I was pressed');
       // }}
     >
-      <LinearGradient
-        // colors={['#A768FE', '#97B4FA']}
-        colors={[
-          colors.buttonGreenLeftEndTransientColor,
-          `${colors.buttonGreenLeftEndTransientColor}70`,
-        ]}
-        start={[0, 0.5]}
-        end={[1, 0.5]}
-        location={[0.25, 0.4, 1]}
-        style={styles.gradient}
+      <View
+        style={{
+          width: width ? width : '100%',
+          // flexDirection: 'row',
+          // alignItems: 'center',
+          // justifyContent: 'space-between',
+          // width: '60%',
+          opacity: 0.9,
+          shadowColor: "#000",
+          shadowOffset: {
+            width: 0,
+            height: 2,
+          },
+          shadowOpacity: 0.25,
+          shadowRadius: 3.84,
+
+          elevation: 5,
+        }}
       >
-        <View
-          style={{
-            // flexDirection: 'row',
-            // alignItems: 'center',
-            // justifyContent: 'space-between',
-            // width: '60%',
-          }}
+        <LinearGradient
+          // colors={['#A768FE', '#97B4FA']}
+          colors={[
+            colors.buttonGreenLeftEndTransientColor,
+            `${colors.buttonGreenLeftEndTransientColor}70`,
+          ]}
+          start={[0, 1]}
+          end={[1, 0]}
+          location={[0, 0.4, 1]}
+          style={styles.gradient}
         >
           {/*
             <Image
@@ -97,8 +108,8 @@ const NeumorphicButton = ({
           >
             { title }
           </Text>
-        </View>
-      </LinearGradient>
+        </LinearGradient>
+      </View>
     </NeuButton>
   );
   return view;

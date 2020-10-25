@@ -1,8 +1,8 @@
 import React from 'react';
 import {
-  View,
+  // View,
   Text,
-  Button,
+  // Button,
   TouchableOpacity,
 } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -74,6 +74,8 @@ function AuthStack() {
           component={OnboardingScreen}
           options={{
             gestureEnabled: false,
+            // DISABLES SLIDING MOTION
+            animationEnabled: false,
             headerStyle: {
               backgroundColor: colors.offGrey, // 'transparent',
             },

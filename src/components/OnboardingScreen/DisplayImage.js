@@ -23,9 +23,9 @@ const styles = StyleSheet.create({
     // paddingBottom: 50,
     alignItems: 'center',
 
-    borderWidth: 1,
-    borderColor: 'red',
-    borderStyle: 'solid',
+    // borderWidth: 1,
+    // borderColor: 'red',
+    // borderStyle: 'solid',
   },
   image: {
     maxWidth: screen.width * 0.95, // 200,

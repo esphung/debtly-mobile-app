@@ -24,6 +24,7 @@ module.exports = function(api) {
           screens: './src/screens',
           navigators: './src/navigators',
           components: './src/components',
+          assets: './assets'
         },
       },
     ],
