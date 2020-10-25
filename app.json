@@ -2,13 +2,13 @@
   "expo": {
     "name": "debtly-mobile-app",
     "slug": "debtly-mobile-app",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/debtly_icon256x256.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/debtly-splash-screen.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#E1E1EA"
     },
     "updates": {
       "fallbackToCacheTimeout": 0

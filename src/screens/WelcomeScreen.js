@@ -103,6 +103,7 @@ function WelcomeScreen({ navigation }) {
           <NeumorphicButton
             onPress={getStartedBtnPressed}
             title="Get Started"
+            width={300}
           />
         </View>
         <View

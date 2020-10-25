@@ -15,7 +15,7 @@ import WelcomeScreen from 'screens/WelcomeScreen';
 // import HomeScreen from 'screens/HomeScreen';
 // import DetailsScreen from 'screens/DetailsScreen';
 import OnboardingScreen from 'screens/OnboardingScreen';
-// import NeumorphicTestScreen from 'screens/NeumorphicTestScreen';
+import OnboardSuccessScreen from 'screens/OnboardSuccessScreen';
 
 const Stack = createStackNavigator();
 
@@ -76,6 +76,21 @@ function AuthStack() {
             gestureEnabled: false,
             // DISABLES SLIDING MOTION
             animationEnabled: false,
+            headerStyle: {
+              backgroundColor: colors.offGrey, // 'transparent',
+            },
+            headerTitle: '',
+            headerTintColor: 'white', // 'transparent',
+            headerLeft: () => {}, // show nothing in top left
+          }}
+        />
+        <Stack.Screen
+          name="OnboardSuccess"
+          component={OnboardSuccessScreen}
+          options={{
+            // gestureEnabled: false,
+            // DISABLES SLIDING MOTION
+            // animationEnabled: false,
             headerStyle: {
               backgroundColor: colors.offGrey, // 'transparent',
             },

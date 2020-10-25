@@ -106,7 +106,10 @@ function OnboardingScreen({ navigation, route }) {
 
   const showNextSlide = () => {
     const nextSlideId = slideId + 1;
-    if (nextSlideId >= slides.length) return;
+    if (nextSlideId >= slides.length) {
+      showSuccessScreen();
+      return;
+    }
     navigation.push('Onboarding', {
       slideId: slideId + 1,
     });
@@ -116,6 +119,9 @@ function OnboardingScreen({ navigation, route }) {
       setCurrentSlide(slides.find((item) => item.id + 1 === currentSlide.id));
     }
     navigation.goBack();
+  };
+  const showSuccessScreen = () => {
+    navigation.push('OnboardSuccess');
   };
   const backBtnPressed = () => showPreviousSlide();
   // const view = (

@@ -49,8 +49,8 @@ const NeumorphicButton = ({
         alignSelf: 'center',
         maxHeight: screen.height * 0.08,
         height: 70,
-        maxWidth: screen.width * 0.45,
-        width: width ? width : '100%',
+        // maxWidth: screen.width * 0.45,
+        width: width,
         borderRadius: 9,
         // borderWidth: 1,
         // borderColor: 'red',
@@ -66,7 +66,7 @@ const NeumorphicButton = ({
     >
       <View
         style={{
-          width: width ? width : '100%',
+          width: width,
           // flexDirection: 'row',
           // alignItems: 'center',
           // justifyContent: 'space-between',
